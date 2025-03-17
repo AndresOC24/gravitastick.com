@@ -5,11 +5,27 @@ const {tittle} = Astro.props;
 
 <!doctype html>
 <html lang="es">
-	<head>
+	<>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="robots" content="index, follow"/>
+		<meta name="description" content="Gravita Stick es la herramienta ideal para mejorar tu movilidad, flexibilidad y fuerza. Diseñadas con materiales de alta calidad como PVC y madera, estas barras alivian tensiones, previenen lesiones y potencian tu entrenamiento. Perfectas para gimnasios, rehabilitación, colegios y entrenamiento funcional. ¡Descubre la versatilidad de Gravita Stick!"/>
+		<!-- OPEN GRAPH -->
+		<meta property="og:title" content="GravitaStick"/>
+		<meta property="og:description" content="Gravita Stick es la herramienta ideal para mejorar tu movilidad, flexibilidad y fuerza. Diseñadas con materiales de alta calidad como PVC y madera, estas barras alivian tensiones, previenen lesiones y potencian tu entrenamiento. Perfectas para gimnasios, rehabilitación, colegios y entrenamiento funcional. ¡Descubre la versatilidad de Gravita Stick!"/>
+		<meta property="og:image" content="/public/images/LogoOficial.jpg"/>
+		<meta property="og:image:alt" content="Logo oficial de Gravita Stick"/>
+
+		<!-- Links alternativos y canonico de la página -->
+		<link rel="canonical" href="https://www.gravitastick.com" hreflang="es"/>
+		<link rel="alternate" href="https://www.gravitastick.com" hreflang="es-BO"/>
+		<link rel="alternate" href="https://www.gravitastick.com" hreflang="x-default"/>
+		
+		<!-- Iconos de la página -->
+		<link rel="icon" href="/public/favicon.svg"/>
+
 		<title>{tittle}</title>
+		
 	</head>
 	<body>
 		<slot/>

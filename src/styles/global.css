@@ -1,2 +1,21 @@
 @import "tailwindcss";
 
+@theme{
+    --color-primary-yellow: #f2d608;
+    --color-secondary-blue-dark: #07131F;
+    --color-tertiary-white: #feffff;
+}
+
+#navbar{
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+}
+
+#hero{
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+}
+
+#mobile-menu{
+    background-color: var(--color-secondary-blue-dark);
+}

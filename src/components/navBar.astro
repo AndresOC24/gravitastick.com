@@ -1,8 +1,73 @@
 ---
-import astroLogo from '../assets/astro.svg';
-import background from '../assets/background.svg';
----
+let isMenuOpen = false;
 
-<h2>
-    Este es mi navbar
-</h2>
+function toggleMenu() {
+  const menu = document.querySelector("#mobile-menu");
+  isMenuOpen = !isMenuOpen;
+  if (menu) {
+    menu.classList.toggle("hidden");
+  }
+}
+---
+    <!-- Colocamos el script al final del body para asegurarnos que el DOM esté cargado -->
+    <script>
+        // Hacemos que toggleMenu sea accesible globalmente
+        (window as any).toggleMenu = function() {
+          const menu = document.querySelector("#mobile-menu");
+          if (menu) {
+            menu.classList.toggle("hidden");
+          }
+        };
+  
+        // Ejemplo del script para el navbar (mantenerlo o ajustarlo según necesites)
+        document.addEventListener("DOMContentLoaded", function () {
+          const navbar = document.querySelector("#navbar");
+  
+          if (navbar) {
+            window.addEventListener("scroll", function () {
+              if (window.scrollY > 50) {
+                navbar.setAttribute("style", "background-color: var(--color-secondary-blue-dark) !important");
+                navbar.classList.add("shadow-lg");
+              } else {
+                navbar.setAttribute("style", "background-color: transparent !important");
+                navbar.classList.remove("shadow-lg");
+              }
+            });
+          }
+        });
+      </script>
+
+
+<nav id="navbar" class="fixed w-full top-0 left-0 z-50 transition-all duration-300 bg-transparent">
+    <div class="container mx-auto flex justify-between items-center py-6 px-8">
+      <!-- Logo -->
+      <a href="/" class="flex items-center">
+        <img src="/images/LogoOficialSinFondo.webp" alt="Logo GravitaStick" class="h-10 w-auto" />
+      </a>
+
+      <!-- Menú Desktop -->
+      <ul class="hidden md:flex space-x-12 text-white font-medium text-lg">
+        <li><a href="#" class="hover:text-yellow-400 transition-colors duration-300">Ofrecemos</a></li>
+        <li><a href="#" class="hover:text-yellow-400 transition-colors duration-300">Quienes somos</a></li>
+        <li><a href="#" class="hover:text-yellow-400 transition-colors duration-300">Aplicaciones</a></li>
+        <li><a href="#" class="hover:text-yellow-400 transition-colors duration-300">Productos</a></li>
+      </ul>
+
+      <!-- Botón menú hamburguesa en móvil -->
+      <button class="md:hidden focus:outline-none" onclick="toggleMenu()">
+        <img src="/src/assets/iconMenu.svg" alt="Menú" class="h-8 w-8 text-white" />
+      </button>
+    </div>
+
+    <!-- Menú desplegable en móvil -->
+    <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full text-white text-center py-4">
+      <ul class="space-y-4">
+        <li><a href="#" class="block hover:text-yellow-400 transition-colors duration-300">Ofrecemos</a></li>
+        <li><a href="#" class="block hover:text-yellow-400 transition-colors duration-300">Quienes somos</a></li>
+        <li><a href="#" class="block hover:text-yellow-400 transition-colors duration-300">Aplicaciones</a></li>
+        <li><a href="#" class="block hover:text-yellow-400 transition-colors duration-300">Productos</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  

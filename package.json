@@ -12,5 +12,9 @@
     "@tailwindcss/vite": "^4.0.14",
     "astro": "^5.5.2",
     "tailwindcss": "^4.0.14"
+  },
+  "devDependencies": {
+    "postcss": "^8.5.3",
+    "postcss-load-config": "^6.0.1"
   }
 }

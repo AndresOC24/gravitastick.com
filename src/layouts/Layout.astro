@@ -5,9 +5,9 @@ const {tittle} = Astro.props;
 
 <!doctype html>
 <html lang="es">
-	<>
+	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="robots" content="index, follow"/>
 		<meta name="description" content="Gravita Stick es la herramienta ideal para mejorar tu movilidad, flexibilidad y fuerza. Diseñadas con materiales de alta calidad como PVC y madera, estas barras alivian tensiones, previenen lesiones y potencian tu entrenamiento. Perfectas para gimnasios, rehabilitación, colegios y entrenamiento funcional. ¡Descubre la versatilidad de Gravita Stick!"/>
 		<!-- OPEN GRAPH -->
@@ -24,8 +24,12 @@ const {tittle} = Astro.props;
 		<!-- Iconos de la página -->
 		<link rel="icon" href="/public/favicon.svg"/>
 
+		<!-- Tipografías -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
 		<title>{tittle}</title>
-		
 	</head>
 	<body>
 		<slot/>

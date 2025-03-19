@@ -19,3 +19,9 @@
 #mobile-menu{
     background-color: var(--color-secondary-blue-dark);
 }
+
+#features{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    max-width: 85%;
+}

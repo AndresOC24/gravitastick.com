@@ -23,5 +23,14 @@
 #features{
     font-family: 'Poppins', sans-serif;
     font-style: normal;
-    max-width: 85%;
+    /* max-width: 85%; */
+}
+
+#applications{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+}
+
+html{
+    scroll-behavior: smooth;
 }

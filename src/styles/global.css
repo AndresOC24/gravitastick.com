@@ -40,3 +40,24 @@
 html{
     scroll-behavior: smooth;
 }
+
+  /* Estilos adicionales para las animaciones */
+  .producto {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .producto:hover {
+    transform: translateY(-5px);
+  }
+  
+  .imagen-container {
+    overflow: hidden;
+  }
+  
+  .imagen-container img {
+    transition: transform 0.5s ease;
+  }
+  
+  .imagen-container:hover img {
+    transform: scale(1.1);
+  }

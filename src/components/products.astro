@@ -1,289 +1,333 @@
 <section id="products" class="min-h-screen w-full bg-secondary-blue-dark overflow-x-hidden">
-    <div title="Productos" class="container mx-auto py-24 px-4">
-      <h2 class="text-3xl font-extrabold mb-8 text-center text-gray-100">Nuestros Productos</h2>
-        <div class="productos-container p-6 rounded-lg max-w-6xl mx-auto">
-            <div class="flex justify-between items-center mb-8">
-              <!-- <h2 class="text-white text-3xl font-bold">Productos</h2> -->
-              <div class="flex-grow mx-4">
-                <div class="h-1 bg-white rounded"></div>
+  <div title="Productos" class="container mx-auto py-24 px-4">
+    <h2 class="text-3xl font-extrabold mb-8 text-center text-gray-100">Nuestros Productos</h2>
+      <div class="productos-container p-6 rounded-lg max-w-6xl mx-auto">
+          <div class="flex justify-between items-center mb-8">
+            <div class="flex-grow mx-4">
+              <div class="h-1 bg-white rounded"></div>
+            </div>
+          </div>
+        
+          <!-- Categorías -->
+          <div class="categorias-container bg-gray-100/90 p-3 rounded-lg mb-6 shadow-lg">
+            <div class="grid grid-cols-2 gap-2">
+              <button class="categoria-btn px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-md active w-full" data-categoria="gimnasios">
+                Gimnasios
+              </button>
+              <button class="categoria-btn px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-md w-full" data-categoria="colegios">
+                Colegios
+              </button>
+              <button class="categoria-btn px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-md w-full" data-categoria="rehabilitacion">
+                Rehabilitación
+              </button>
+              <button class="categoria-btn px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-md w-full" data-categoria="entrenamiento">
+                Adulto mayor
+              </button>
+              <button class="categoria-btn px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-md col-span-2 w-full" data-categoria="adulto-mayor">
+                Entrenamiento
+              </button>
+            </div>
+          </div>
+        
+          <!-- Contenedor principal para productos -->
+          <div id="productos-container" class="transition-all duration-500">
+            <!-- Sección PVC -->
+            <div class="material-section p-6 rounded-lg mb-8 shadow-lg">
+              <div class="flex justify-between items-center mb-6">
+                <h3 class="text-gray-100 text-2xl font-bold">PVC</h3>
+                <div class="flex-grow mx-4">
+                  <div class="h-1 bg-gray-100 rounded"></div>
+                </div>
+              </div>
+          
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="pvc-productos">
+                <!-- Los productos se cargarán dinámicamente con JavaScript -->
               </div>
             </div>
           
-            <!-- Categorías -->
-            <div class="categorias-container bg-gray-100/90 p-3 rounded-lg mb-6 shadow-lg">
-              <div class="grid grid-cols-2 gap-2">
-                <button class="categoria-btn px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-md active w-full" data-categoria="gimnasios">
-                  Gimnasios
-                </button>
-                <button class="categoria-btn px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-md w-full" data-categoria="colegios">
-                  Colegios
-                </button>
-                <button class="categoria-btn px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-md w-full" data-categoria="rehabilitacion">
-                  Rehabilitación
-                </button>
-                <button class="categoria-btn px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-md w-full" data-categoria="entrenamiento">
-                  Adulto mayor
-                </button>
-                <button class="categoria-btn px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-md col-span-2 w-full" data-categoria="adulto-mayor">
-                  Entrenamiento
-                </button>
+            <!-- Sección Madera -->
+            <div class="material-section p-6 rounded-lg shadow-lg">
+              <div class="flex justify-between items-center mb-6">
+                <h3 class="text-primary-yellow text-2xl font-bold">Madera</h3>
+                <div class="flex-grow mx-4">
+                  <div class="h-1 bg-primary-yellow rounded"></div>
+                </div>
               </div>
-            </div>
           
-            <!-- Contenedor principal para productos -->
-            <div id="productos-container" class="transition-all duration-500">
-              <!-- Sección PVC -->
-              <div class="material-section  p-6 rounded-lg mb-8 shadow-lg">
-                <div class="flex justify-between items-center mb-6">
-                  <h3 class="text-gray-100 text-2xl font-bold">PVC</h3>
-                  <div class="flex-grow mx-4">
-                    <div class="h-1 bg-gray-100 rounded"></div>
-                  </div>
-                </div>
-            
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="pvc-productos">
-                  <!-- Los productos se cargarán dinámicamente con JavaScript -->
-                </div>
-              </div>
-            
-              <!-- Sección Madera -->
-              <div class="material-section  p-6 rounded-lg shadow-lg">
-                <div class="flex justify-between items-center mb-6">
-                  <h3 class="text-primary-yellow text-2xl font-bold">Madera</h3>
-                  <div class="flex-grow mx-4">
-                    <div class="h-1 bg-primary-yellow rounded"></div>
-                  </div>
-                </div>
-            
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="madera-productos">
-                  <!-- Los productos se cargarán dinámicamente con JavaScript -->
-                </div>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="madera-productos">
+                <!-- Los productos se cargarán dinámicamente con JavaScript -->
               </div>
             </div>
           </div>
-    </div>
+        </div>
+  </div>
 </section>
 
 
 <script>
-  // Datos de productos por categoría y material
-  const productos = {
-    gimnasios: {
-      pvc: [
-        { imagen: "https://www.dondeir.com/wp-content/uploads/2022/01/5-herramientas-y-accesorios-para-hacer-ejercicio-en-casa-mancuernas.jpg", nombre: "GRAVITY STICK 1M X0.25", id: "g-pvc-1" },
-        { imagen: "https://image.made-in-china.com/202f0j00IsjWCwJPlGUl/Hot-Selling-Eco-Friendly-Weight-Lifting-Equipment-Gym-Fitness-Set-Tools-Cast-Iron-Kettlebell.webp", nombre: "GRAVITY STICK 1M X0.33", id: "g-pvc-2" },
-        { imagen: "https://cdn.cnn.com/cnnnext/dam/assets/200312124031-underscored-workout-pullup-super-169.jpg", nombre: "GRAVITY STICK 1M X0.25", id: "g-pvc-3" }
-      ],
-      madera: [
-        { imagen: "https://saposyprincesas.elmundo.es/assets/2020/03/rueda-2.jpg", nombre: "GRAVITY STICK 1M X0.25", id: "g-madera-1" },
-        { imagen: "https://www.dondeir.com/wp-content/uploads/2022/01/5-herramientas-y-accesorios-para-hacer-ejercicio-en-casa-mancuernas.jpg", nombre: "GRAVITY STICK 1M X0.33", id: "g-madera-2" }
-      ]
-    },
-    colegios: {
-      pvc: [
-        { imagen: "https://image.made-in-china.com/202f0j00IsjWCwJPlGUl/Hot-Selling-Eco-Friendly-Weight-Lifting-Equipment-Gym-Fitness-Set-Tools-Cast-Iron-Kettlebell.webp", nombre: "BARRA ESCOLAR 0.8M", id: "c-pvc-1" },
-        { imagen: "https://cdn.shopify.com/s/files/1/2098/0315/files/rueda-abdominal-elemento-ejercicio-imprescindible.jpg?v=1677175735", nombre: "PELOTA EDUCATIVA 20CM", id: "c-pvc-2" },
-        { imagen: "https://resources.diariolibre.com/images/documents/10157/0/image_content_8392676_20170619182909.jpg", nombre: "ARO DIDÁCTICO 50CM", id: "c-pvc-3" }
-      ],
-      madera: [
-        { imagen: "https://saposyprincesas.elmundo.es/assets/2020/03/rueda-2.jpg", nombre: "BANCO ESCOLAR 1.2M", id: "c-madera-1" },
-        { imagen: "https://i.blogs.es/ed0dba/71cpx0f0j0l._ac_sl1500_/650_1200.jpeg", nombre: "ESCALERA EDUCATIVA", id: "c-madera-2" },
-        { imagen: "https://m.media-amazon.com/images/I/612WoiRfAsL._AC_UF1000,1000_QL80_.jpg", nombre: "CUBO SENSORIAL", id: "c-madera-3" }
-      ]
-    },
-    rehabilitacion: {
-      pvc: [
-        { imagen: "https://image.made-in-china.com/2f0j00hvzWyActAeuD/Wall-Mounting-Exercise-Fitness-Steel-Pull-DIP-Chin-up-Bar.webp", nombre: "BARRA PARALELA AJUSTABLE", id: "r-pvc-1" },
-        { imagen: "https://contents.mediadecathlon.com/p2720084/k$bc81b71ae62687325d8428b7fa6ce7d7/pesa-rusa-con-base-de-goma-de-20-kg-kettlebell.jpg?format=auto&quality=40&f=520x520", nombre: "PELOTA TERAPÉUTICA 30CM", id: "r-pvc-2" },
-        { imagen: "https://i.blogs.es/ed0dba/71cpx0f0j0l._ac_sl1500_/650_1200.jpeg", nombre: "RAMPA REHABILITACIÓN", id: "r-pvc-3" }
-      ],
-      madera: [
-        { imagen: "https://resources.diariolibre.com/images/documents/10157/0/image_content_8392676_20170619182909.jpg", nombre: "ESCALERA DE DEDOS", id: "r-madera-1" },
-        { imagen: "https://resources.diariolibre.com/images/documents/10157/0/image_content_8392676_20170619182909.jpg", nombre: "TABLA EQUILIBRIO", id: "r-madera-2" },
-        { imagen: "https://cdn.shopify.com/s/files/1/2098/0315/files/rueda-abdominal-elemento-ejercicio-imprescindible.jpg?v=1677175735", nombre: "CUÑA POSICIONAL", id: "r-madera-3" }
-      ]
-    },
-    entrenamiento: {
-      pvc: [
-        { imagen: "https://saposyprincesas.elmundo.es/assets/2020/03/rueda-2.jpg", nombre: "BARRA FUNCIONAL 1.2M", id: "e-pvc-1" },
-        { imagen: "https://i.blogs.es/ed0dba/71cpx0f0j0l._ac_sl1500_/650_1200.jpeg", nombre: "STEP AJUSTABLE", id: "e-pvc-2" },
-        { imagen: "https://image.made-in-china.com/2f0j00hvzWyActAeuD/Wall-Mounting-Exercise-Fitness-Steel-Pull-DIP-Chin-up-Bar.webp", nombre: "CONO ENTRENAMIENTO 30CM", id: "e-pvc-3" }
-      ],
-      madera: [
-        { imagen: "https://resources.diariolibre.com/images/documents/10157/0/image_content_8392676_20170619182909.jpg", nombre: "CAJÓN PLIOMÉTRICO", id: "e-madera-1" },
-        { imagen: "https://img.freepik.com/fotos-premium/varias-herramientas-hacer-ejercicio-suelo-habitacion_393202-15823.jpg", nombre: "BANCO INCLINADO", id: "e-madera-2" },
-        { imagen: "https://resources.diariolibre.com/images/documents/10157/0/image_content_8392676_20170619182909.jpg", nombre: "BARRA OLÍMPICA", id: "e-madera-3" }
-      ]
-    },
-    "adulto-mayor": {
-      pvc: [
-        { imagen: "https://resources.diariolibre.com/images/documents/10157/0/image_content_8392151_20170619182907.jpg", nombre: "BASTÓN DE APOYO", id: "am-pvc-1" },
-        { imagen: "https://img.freepik.com/fotos-premium/varias-herramientas-hacer-ejercicio-suelo-habitacion_393202-15823.jpg", nombre: "ARO DE EJERCICIO SUAVE", id: "am-pvc-2" },
-        { imagen: "https://saposyprincesas.elmundo.es/assets/2020/03/rueda-2.jpg", nombre: "PELOTA SENSORIAL", id: "am-pvc-3" }
-      ],
-      madera: [
-        { imagen: "https://i.blogs.es/ed0dba/71cpx0f0j0l._ac_sl1500_/650_1200.jpeg", nombre: "SILLA ERGONÓMICA", id: "am-madera-1" },
-        { imagen: "https://resources.diariolibre.com/images/documents/10157/0/image_content_8392151_20170619182907.jpg", nombre: "BARRA DE APOYO", id: "am-madera-2" },
-        { imagen: "https://resources.diariolibre.com/images/documents/10157/0/image_content_8392676_20170619182909.jpg", nombre: "ESCALÓN ASISTIDO", id: "am-madera-3" }
-      ]
-    }
-  };
-
-  // Función para renderizar productos con efectos de transición
-  /**
-   * @param {keyof typeof productos} categoria
-   */
-  /**
-   * @param {keyof typeof productos} categoria
-   */
-  function renderizarProductos(categoria: keyof typeof productos) {
-    const productosContainer = document.getElementById('productos-container');
-    const pvcContainer = document.getElementById('pvc-productos');
-    const maderaContainer = document.getElementById('madera-productos');
-    
-    // Aplicar efecto de desvanecimiento al contenedor principal
-    if (productosContainer) {
-      productosContainer.classList.add('opacity-0');
-    }
-    
-    // Esperar a que termine la animación de desvanecimiento
-    setTimeout(() => {
-      // Limpiar contenedores
-      if (pvcContainer) {
-        pvcContainer.innerHTML = '';
-      }
-      if (maderaContainer) {
-        maderaContainer.innerHTML = '';
-      }
-      
-      // Obtener productos de la categoría seleccionada
-      const productosPVC = productos[categoria].pvc;
-      const productosMadera = productos[categoria].madera;
-      
-      // Renderizar productos PVC con retraso para crear efecto de cascada
-      if (pvcContainer) {
-        productosPVC.forEach((producto, index) => {
-          setTimeout(() => {
-            const productoElement = document.createElement('div');
-            productoElement.className = 'producto bg-white rounded-lg overflow-hidden shadow-lg transform transition-all duration-500 opacity-0 translate-y-4';
-            productoElement.innerHTML = `
-              <div class="imagen-container rounded-t-lg overflow-hidden">
-                <img src="${producto.imagen}" alt="${producto.nombre}" class="w-full h-48 object-cover transition-transform duration-500 transform hover:scale-110">
-              </div>
-            `;
-            pvcContainer.appendChild(productoElement);
-            
-            // Forzar un reflow para que la animación funcione
-            void productoElement.offsetWidth;
-            
-            // Mostrar el elemento con animación
-            setTimeout(() => {
-              productoElement.classList.remove('opacity-0', 'translate-y-4');
-            }, 50);
-          }, index * 100);
-        });
-      }
-      
-      // Renderizar productos Madera con retraso para crear efecto de cascada
-      if (maderaContainer) {
-        productosMadera.forEach((producto, index) => {
-          setTimeout(() => {
-            const productoElement = document.createElement('div');
-            productoElement.className = 'producto bg-white rounded-lg overflow-hidden shadow-lg transform transition-all duration-500 opacity-0 translate-y-4';
-            productoElement.innerHTML = `
-              <div class="imagen-container rounded-t-lg overflow-hidden">
-                <img src="${producto.imagen}" alt="${producto.nombre}" class="w-full h-48 object-cover transition-transform duration-500 transform hover:scale-110">
-              </div>
-            `;
-            maderaContainer.appendChild(productoElement);
-            
-            // Forzar un reflow para que la animación funcione
-            void productoElement.offsetWidth;
-            
-            // Mostrar el elemento con animación
-            setTimeout(() => {
-              productoElement.classList.remove('opacity-0', 'translate-y-4');
-            }, 50);
-          }, index * 100 + 300); // Delay adicional para productos de madera
-        });
-      }
-      
-      // Mostrar el contenedor principal con animación
-      setTimeout(() => {
-        if (productosContainer) {
-          productosContainer.classList.remove('opacity-0');
-        }
-      }, 100);
-    }, 300); // Esperar 300ms para el efecto de desvanecimiento
+// Datos de productos por categoría y material
+const productos = {
+  gimnasios: {
+    pvc: [
+      { imagen: "https://www.dondeir.com/wp-content/uploads/2022/01/5-herramientas-y-accesorios-para-hacer-ejercicio-en-casa-mancuernas.jpg", nombre: "GRAVITY STICK 1M X0.25", id: "g-pvc-1", titulo: "Barra de equilibrio para entrenamiento funcional" },
+      { imagen: "https://image.made-in-china.com/202f0j00IsjWCwJPlGUl/Hot-Selling-Eco-Friendly-Weight-Lifting-Equipment-Gym-Fitness-Set-Tools-Cast-Iron-Kettlebell.webp", nombre: "GRAVITY STICK 1M X0.33", id: "g-pvc-2", titulo: "Kettlebell ajustable para rutinas intensas" },
+      { imagen: "https://cdn.cnn.com/cnnnext/dam/assets/200312124031-underscored-workout-pullup-super-169.jpg", nombre: "GRAVITY STICK 1M X0.25", id: "g-pvc-3", titulo: "Barra de dominadas premium" }
+    ],
+    madera: [
+      { imagen: "https://saposyprincesas.elmundo.es/assets/2020/03/rueda-2.jpg", nombre: "GRAVITY STICK 1M X0.25", id: "g-madera-1", titulo: "Rueda de abdominales ergonómica" },
+      { imagen: "https://www.dondeir.com/wp-content/uploads/2022/01/5-herramientas-y-accesorios-para-hacer-ejercicio-en-casa-mancuernas.jpg", nombre: "GRAVITY STICK 1M X0.33", id: "g-madera-2", titulo: "Barra multifunción alta resistencia" }
+    ]
+  },
+  colegios: {
+    pvc: [
+      { imagen: "https://image.made-in-china.com/202f0j00IsjWCwJPlGUl/Hot-Selling-Eco-Friendly-Weight-Lifting-Equipment-Gym-Fitness-Set-Tools-Cast-Iron-Kettlebell.webp", nombre: "BARRA ESCOLAR 0.8M", id: "c-pvc-1", titulo: "Barra educativa para actividades físicas" },
+      { imagen: "https://cdn.shopify.com/s/files/1/2098/0315/files/rueda-abdominal-elemento-ejercicio-imprescindible.jpg?v=1677175735", nombre: "PELOTA EDUCATIVA 20CM", id: "c-pvc-2", titulo: "Pelota sensorial multicolor" },
+      { imagen: "https://resources.diariolibre.com/images/documents/10157/0/image_content_8392676_20170619182909.jpg", nombre: "ARO DIDÁCTICO 50CM", id: "c-pvc-3", titulo: "Aro educativo para desarrollo motriz" }
+    ],
+    madera: [
+      { imagen: "https://saposyprincesas.elmundo.es/assets/2020/03/rueda-2.jpg", nombre: "BANCO ESCOLAR 1.2M", id: "c-madera-1", titulo: "Banco de madera sostenible para aulas" },
+      { imagen: "https://i.blogs.es/ed0dba/71cpx0f0j0l._ac_sl1500_/650_1200.jpeg", nombre: "ESCALERA EDUCATIVA", id: "c-madera-2", titulo: "Escalera coordinación infantil" },
+      { imagen: "https://m.media-amazon.com/images/I/612WoiRfAsL._AC_UF1000,1000_QL80_.jpg", nombre: "CUBO SENSORIAL", id: "c-madera-3", titulo: "Cubo educativo para estimulación temprana" }
+    ]
+  },
+  rehabilitacion: {
+    pvc: [
+      { imagen: "https://image.made-in-china.com/2f0j00hvzWyActAeuD/Wall-Mounting-Exercise-Fitness-Steel-Pull-DIP-Chin-up-Bar.webp", nombre: "BARRA PARALELA AJUSTABLE", id: "r-pvc-1", titulo: "Barras paralelas para fisioterapia" },
+      { imagen: "https://contents.mediadecathlon.com/p2720084/k$bc81b71ae62687325d8428b7fa6ce7d7/pesa-rusa-con-base-de-goma-de-20-kg-kettlebell.jpg?format=auto&quality=40&f=520x520", nombre: "PELOTA TERAPÉUTICA 30CM", id: "r-pvc-2", titulo: "Pelota para ejercicios terapéuticos" },
+      { imagen: "https://i.blogs.es/ed0dba/71cpx0f0j0l._ac_sl1500_/650_1200.jpeg", nombre: "RAMPA REHABILITACIÓN", id: "r-pvc-3", titulo: "Rampa progresiva para rehabilitación" }
+    ],
+    madera: [
+      { imagen: "https://resources.diariolibre.com/images/documents/10157/0/image_content_8392676_20170619182909.jpg", nombre: "ESCALERA DE DEDOS", id: "r-madera-1", titulo: "Escalera para rehabilitación de manos" },
+      { imagen: "https://resources.diariolibre.com/images/documents/10157/0/image_content_8392676_20170619182909.jpg", nombre: "TABLA EQUILIBRIO", id: "r-madera-2", titulo: "Tabla de equilibrio para propiocepción" },
+      { imagen: "https://cdn.shopify.com/s/files/1/2098/0315/files/rueda-abdominal-elemento-ejercicio-imprescindible.jpg?v=1677175735", nombre: "CUÑA POSICIONAL", id: "r-madera-3", titulo: "Cuña ergonómica para terapia postural" }
+    ]
+  },
+  entrenamiento: {
+    pvc: [
+      { imagen: "https://saposyprincesas.elmundo.es/assets/2020/03/rueda-2.jpg", nombre: "BARRA FUNCIONAL 1.2M", id: "e-pvc-1", titulo: "Barra multifuncional para CrossFit" },
+      { imagen: "https://i.blogs.es/ed0dba/71cpx0f0j0l._ac_sl1500_/650_1200.jpeg", nombre: "STEP AJUSTABLE", id: "e-pvc-2", titulo: "Step con altura regulable" },
+      { imagen: "https://image.made-in-china.com/2f0j00hvzWyActAeuD/Wall-Mounting-Exercise-Fitness-Steel-Pull-DIP-Chin-up-Bar.webp", nombre: "CONO ENTRENAMIENTO 30CM", id: "e-pvc-3", titulo: "Conos para circuitos de agilidad" }
+    ],
+    madera: [
+      { imagen: "https://resources.diariolibre.com/images/documents/10157/0/image_content_8392676_20170619182909.jpg", nombre: "CAJÓN PLIOMÉTRICO", id: "e-madera-1", titulo: "Cajón para saltos pliométricos" },
+      { imagen: "https://img.freepik.com/fotos-premium/varias-herramientas-hacer-ejercicio-suelo-habitacion_393202-15823.jpg", nombre: "BANCO INCLINADO", id: "e-madera-2", titulo: "Banco inclinado para entrenamiento" },
+      { imagen: "https://resources.diariolibre.com/images/documents/10157/0/image_content_8392676_20170619182909.jpg", nombre: "BARRA OLÍMPICA", id: "e-madera-3", titulo: "Barra olímpica de competición" }
+    ]
+  },
+  "adulto-mayor": {
+    pvc: [
+      { imagen: "https://resources.diariolibre.com/images/documents/10157/0/image_content_8392151_20170619182907.jpg", nombre: "BASTÓN DE APOYO", id: "am-pvc-1", titulo: "Bastón ergonómico para adultos mayores" },
+      { imagen: "https://img.freepik.com/fotos-premium/varias-herramientas-hacer-ejercicio-suelo-habitacion_393202-15823.jpg", nombre: "ARO DE EJERCICIO SUAVE", id: "am-pvc-2", titulo: "Aro flexible para ejercicios suaves" },
+      { imagen: "https://saposyprincesas.elmundo.es/assets/2020/03/rueda-2.jpg", nombre: "PELOTA SENSORIAL", id: "am-pvc-3", titulo: "Pelota terapéutica para estimulación" }
+    ],
+    madera: [
+      { imagen: "https://i.blogs.es/ed0dba/71cpx0f0j0l._ac_sl1500_/650_1200.jpeg", nombre: "SILLA ERGONÓMICA", id: "am-madera-1", titulo: "Silla ergonómica con soporte lumbar" },
+      { imagen: "https://resources.diariolibre.com/images/documents/10157/0/image_content_8392151_20170619182907.jpg", nombre: "BARRA DE APOYO", id: "am-madera-2", titulo: "Barra de apoyo para movilidad segura" },
+      { imagen: "https://resources.diariolibre.com/images/documents/10157/0/image_content_8392676_20170619182909.jpg", nombre: "ESCALÓN ASISTIDO", id: "am-madera-3", titulo: "Escalón con asistencia para movilidad" }
+    ]
   }
+};
 
-  // Configurar eventos de clic para los botones de categoría
-  document.addEventListener('DOMContentLoaded', () => {
-    const botonesCategorias = document.querySelectorAll('.categoria-btn');
+// Función para renderizar productos con efectos de transición
+function renderizarProductos(categoria) {
+  const productosContainer = document.getElementById('productos-container');
+  const pvcContainer = document.getElementById('pvc-productos');
+  const maderaContainer = document.getElementById('madera-productos');
+  
+  // Aplicar efecto de desvanecimiento al contenedor principal
+  if (productosContainer) {
+    productosContainer.classList.add('opacity-0');
+  }
+  
+  // Esperar a que termine la animación de desvanecimiento
+  setTimeout(() => {
+    // Limpiar contenedores
+    if (pvcContainer) {
+      pvcContainer.innerHTML = '';
+    }
+    if (maderaContainer) {
+      maderaContainer.innerHTML = '';
+    }
     
-    // Aplicar estilos iniciales a los botones
-    botonesCategorias.forEach(boton => {
-      if (boton.classList.contains('active')) {
-        boton.classList.add('bg-orange-500', 'text-white', 'shadow-md');
-      } else {
-        boton.classList.add('bg-gray-200', 'text-gray-700');
-      }
-    });
+    // Obtener productos de la categoría seleccionada
+    const productosPVC = productos[categoria].pvc;
+    const productosMadera = productos[categoria].madera;
     
-    // Inicializar con la primera categoría (Gimnasios)
-    renderizarProductos('gimnasios');
-    
-    botonesCategorias.forEach(boton => {
-      boton.addEventListener('click', () => {
-        // Remover clase activa de todos los botones con animación
-        botonesCategorias.forEach(b => {
-          b.classList.remove('active', 'bg-orange-500', 'text-white', 'shadow-md');
-          b.classList.add('bg-gray-200', 'text-gray-700');
+    // Renderizar productos PVC con retraso para crear efecto de cascada
+    if (pvcContainer) {
+      productosPVC.forEach((producto, index) => {
+        setTimeout(() => {
+          const productoElement = document.createElement('div');
+          productoElement.className = 'producto bg-white rounded-lg overflow-hidden shadow-lg transform transition-all duration-500 opacity-0 translate-y-4';
+          productoElement.innerHTML = `
+            <div class="imagen-container rounded-t-lg overflow-hidden">
+              <img src="${producto.imagen}" alt="${producto.nombre}" class="w-full h-48 object-cover transition-transform duration-500 transform hover:scale-110">
+            </div>
+            <div class="producto-info p-4">
+              <h4 class="text-lg font-semibold mb-2">${producto.nombre}</h4>
+              <p class="text-gray-600 text-sm mb-3" id="titulo-${producto.id}" contenteditable="true" data-default-titulo="${producto.titulo}">${producto.titulo}</p>
+              
+            </div>
+          `;
+          pvcContainer.appendChild(productoElement);
           
-          // Aplicar animación de rebote al volver al estado normal
-          b.classList.add('animate-bounce-small');
+          // Forzar un reflow para que la animación funcione
+          void productoElement.offsetWidth;
+          
+          // Mostrar el elemento con animación
           setTimeout(() => {
-            b.classList.remove('animate-bounce-small');
-          }, 300);
+            productoElement.classList.remove('opacity-0', 'translate-y-4');
+          }, 50);
+        }, index * 100);
+      });
+    }
+    
+    // Renderizar productos Madera con retraso para crear efecto de cascada
+    if (maderaContainer) {
+      productosMadera.forEach((producto, index) => {
+        setTimeout(() => {
+          const productoElement = document.createElement('div');
+          productoElement.className = 'producto bg-white rounded-lg overflow-hidden shadow-lg transform transition-all duration-500 opacity-0 translate-y-4';
+          productoElement.innerHTML = `
+            <div class="imagen-container rounded-t-lg overflow-hidden">
+              <img src="${producto.imagen}" alt="${producto.nombre}" class="w-full h-48 object-cover transition-transform duration-500 transform hover:scale-110">
+            </div>
+            <div class="producto-info p-4">
+              <h4 class="text-lg font-semibold mb-2">${producto.nombre}</h4>
+              <p class="text-gray-600 text-sm mb-3" id="titulo-${producto.id}" contenteditable="true" data-default-titulo="${producto.titulo}">${producto.titulo}</p>
+         
+            </div>
+          `;
+          maderaContainer.appendChild(productoElement);
+          
+          // Forzar un reflow para que la animación funcione
+          void productoElement.offsetWidth;
+          
+          // Mostrar el elemento con animación
+          setTimeout(() => {
+            productoElement.classList.remove('opacity-0', 'translate-y-4');
+          }, 50);
+        }, index * 100 + 300); // Delay adicional para productos de madera
+      });
+    }
+    
+    // Mostrar el contenedor principal con animación
+    setTimeout(() => {
+      if (productosContainer) {
+        productosContainer.classList.remove('opacity-0');
+      }
+      
+      // Configurar eventos para edición de títulos
+      document.querySelectorAll('[contenteditable="true"]').forEach(element => {
+        element.addEventListener('focus', function() {
+          this.classList.add('bg-blue-50', 'border', 'border-blue-300', 'rounded', 'px-1');
         });
         
-        // Agregar clase activa al botón seleccionado con animación
-        boton.classList.remove('bg-gray-200', 'text-gray-700');
-        boton.classList.add('active', 'bg-orange-500', 'text-white', 'shadow-md', 'animate-pulse');
+        element.addEventListener('blur', function() {
+          this.classList.remove('bg-blue-50', 'border', 'border-blue-300', 'rounded', 'px-1');
+        });
         
-        setTimeout(() => {
-          boton.classList.remove('animate-pulse');
-        }, 500);
-        
-        // Renderizar productos de la categoría seleccionada
-        const categoria = boton.getAttribute('data-categoria');
-        if (categoria) {
-          renderizarProductos(categoria as "gimnasios" | "colegios" | "rehabilitacion" | "entrenamiento" | "adulto-mayor");
-        }
+        element.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter') {
+            e.preventDefault();
+            this.blur();
+          }
+        });
       });
+    }, 100);
+  }, 300); // Esperar 300ms para el efecto de desvanecimiento
+}
+
+// Configurar eventos de clic para los botones de categoría
+document.addEventListener('DOMContentLoaded', () => {
+  const botonesCategorias = document.querySelectorAll('.categoria-btn');
+  
+  // Aplicar estilos iniciales a los botones
+  botonesCategorias.forEach(boton => {
+    if (boton.classList.contains('active')) {
+      boton.classList.add('bg-orange-500', 'text-white', 'shadow-md');
+    } else {
+      boton.classList.add('bg-gray-200', 'text-gray-700');
+    }
+  });
+  
+  // Inicializar con la primera categoría (Gimnasios)
+  renderizarProductos('gimnasios');
+  
+  botonesCategorias.forEach(boton => {
+    boton.addEventListener('click', () => {
+      // Remover clase activa de todos los botones con animación
+      botonesCategorias.forEach(b => {
+        b.classList.remove('active', 'bg-orange-500', 'text-white', 'shadow-md');
+        b.classList.add('bg-gray-200', 'text-gray-700');
+        
+        // Aplicar animación de rebote al volver al estado normal
+        b.classList.add('animate-bounce-small');
+        setTimeout(() => {
+          b.classList.remove('animate-bounce-small');
+        }, 300);
+      });
+      
+      // Agregar clase activa al botón seleccionado con animación
+      boton.classList.remove('bg-gray-200', 'text-gray-700');
+      boton.classList.add('active', 'bg-orange-500', 'text-white', 'shadow-md', 'animate-pulse');
+      
+      setTimeout(() => {
+        boton.classList.remove('animate-pulse');
+      }, 500);
+      
+      // Renderizar productos de la categoría seleccionada
+      const categoria = boton.getAttribute('data-categoria');
+      if (categoria) {
+        renderizarProductos(categoria);
+      }
     });
   });
+});
 
-  // Agregar estilos CSS personalizados para las animaciones
-  const styleElement = document.createElement('style');
-  styleElement.textContent = `
-    @keyframes bounceSmall {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-3px); }
-    }
-    
-    .animate-bounce-small {
-      animation: bounceSmall 0.3s ease-in-out;
-    }
-    
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    
-    .animate-fade-in {
-      animation: fadeIn 0.5s ease-in-out forwards;
-    }
-  `;
-  document.head.appendChild(styleElement);
+// Agregar estilos CSS personalizados para las animaciones
+const styleElement = document.createElement('style');
+styleElement.textContent = `
+  @keyframes bounceSmall {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+  }
+  
+  .animate-bounce-small {
+    animation: bounceSmall 0.3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out forwards;
+  }
+  
+  [contenteditable="true"]:focus {
+    outline: none;
+  }
+  
+  .reset-titulo-btn {
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+  
+  .reset-titulo-btn:hover {
+    opacity: 1;
+  }
+  
+  @keyframes flashBg {
+    0% { background-color: transparent; }
+    50% { background-color: rgba(254, 240, 138, 0.5); }
+    100% { background-color: transparent; }
+  }
+  
+  .bg-yellow-100 {
+    animation: flashBg 0.5s ease-in-out;
+  }
+`;
+document.head.appendChild(styleElement);
 </script>

@@ -1,6 +1,3 @@
----
----
-
 <section id="applications" class="py-32 px-4 bg-gray-100">
   <div class="max-w-6xl mx-auto">
     <h2 class="text-4xl font-black text-center mb-12">Áreas de aplicación</h2>
@@ -23,20 +20,7 @@
             <div class="text-base md:text-lg leading-relaxed">
               <span class="text-primary-yellow font-bold">Gimnasios:</span> Eleva tu entrenamiento con estiramientos, fuerza y movilidad.
             </div>
-          </li>
-          
-          <li class="flex items-start gap-4">
-            <div class="flex-shrink-0 text-black w-6 h-6">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="m9 12 2 2 4-4"></path>
-              </svg>
-            </div>
-            <div class="text-base md:text-lg leading-relaxed">
-              <span class="text-primary-yellow font-bold">Colegios:</span> Mejora coordinación y equilibrio desde temprana edad.
-            </div>
-          </li>
-          
+          </li>          
           <li class="flex items-start gap-4">
             <div class="flex-shrink-0 text-black w-6 h-6">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
@@ -78,35 +62,30 @@
       <div class="md:w-1/2 mt-8 md:mt-0">
         <div class="relative flex rounded-2xl overflow-hidden h-[400px] md:h-[400px] shadow-lg" id="imageGallery">
           <div class="gallery-image relative flex-1 overflow-hidden transition-all duration-500 ease-in-out" data-index="0">
-            <img src="https://st3.depositphotos.com/9842946/12608/i/450/depositphotos_126080370-stock-photo-woman-jumping-with-skipping-rope.jpg" alt="Persona en rehabilitación" class="w-full h-full object-cover" />
+            <img src="images/imageRehabilitacion.webp" alt="Persona en rehabilitación" class="w-full h-full object-cover" />
             <div class="absolute bottom-0 left-0 right-0 py-3 px-2 text-center font-bold text-primary-yellow bg-secondary-blue-dark/80">Rehabilitación</div>
           </div>
           <div class="gallery-image relative flex-1 overflow-hidden transition-all duration-500 ease-in-out" data-index="1">
-            <img src="https://img.freepik.com/foto-gratis/vista-lateral-pareja-ancianos-calentando-antes-hacer-ejercicio-al-aire-libre_23-2148685732.jpg" alt="Personas Mayores" class="w-full h-full object-cover" />
-            <div class="absolute bottom-0 left-0 right-0 py-3 px-2 text-center font-bold text-white bg-gray-500/80 h-[48px] flex items-center justify-center">
-              <span class="whitespace-nowrap">Adulto Mayor</span>
+            <img src="/images/imageAdultoMayor.webp" alt="Personas Mayores" class="w-full h-full object-cover" />
+            <div class="bg-secondary-blue-dark/80 absolute bottom-0 left-0 right-0 py-3 px-2 text-center font-bold text-white h-[48px] flex items-center justify-center">
+              <span class="text-primary-yellow whitespace-nowrap">Adulto Mayor</span>
             </div>
           </div>
           <div class="gallery-image active relative flex-3 overflow-hidden transition-all duration-500 ease-in-out" data-index="2">
-            <img src="https://img.redbull.com/images/c_crop,x_492,y_0,h_4386,w_3509/c_fill,w_450,h_600/q_auto:low,f_auto/redbullcom/2018/02/04/d059b670-8399-4b91-9c87-c46f2404d1a9/abdominales-en-suspension" alt="Persona en gimnasio" class="w-full h-full object-cover" />
+            <img src="images/imageGimnasio.webp" alt="Persona en gimnasio entrenando con una barra de GravitaStick" class="w-full h-full object-cover" />
             <div class="absolute bottom-0 left-0 right-0 py-3 px-2 text-center font-bold text-primary-yellow bg-secondary-blue-dark/80">Gimnasio</div>
           </div>
           <div class="gallery-image relative flex-1 overflow-hidden transition-all duration-500 ease-in-out" data-index="3">
-            <img src="https://cdn0.uncomo.com/es/posts/6/8/0/trabaja_en_la_posicion_de_tu_cuerpo_38086_3_600.jpg" alt="Niños en colegio" class="w-full h-full object-cover" />
-            <div class="absolute bottom-0 left-0 right-0 py-3 px-2 text-center font-bold text-white bg-gray-500/80">Colegios</div>
-          </div>
-          <div class="gallery-image relative flex-1 overflow-hidden transition-all duration-500 ease-in-out" data-index="4">
-            <img src="https://img.freepik.com/fotos-premium/tiro-vertical-cuerpo-entero-deportista-haciendo-ejercicio-saltar-cuerda_130388-3871.jpg" alt="Niños en colegio" class="w-full h-full object-cover" />
+            <img src="images/imageEntrenamiento.webp" alt="Entrenamiento personal con las barras de GravitaStick" class="w-full h-full object-cover" />
             <div class="absolute bottom-0 left-0 right-0 py-3 px-2 text-center font-bold text-primary-yellow bg-secondary-blue-dark/80">Entrenamiento</div>
           </div>
         </div>
         
         <div class="flex justify-center gap-2 mt-4" id="pagination">
           <button class="w-3 h-3 rounded-full bg-gray-200 transition-colors duration-300" aria-label="Slide 1" data-index="0"></button>
-          <button class="w-3 h-3 rounded-full bg-blue-500 transition-colors duration-300 active" aria-label="Slide 2" data-index="1"></button>
-          <button class="w-3 h-3 rounded-full bg-gray-200 transition-colors duration-300" aria-label="Slide 3" data-index="2"></button>
+          <button class="w-3 h-3 rounded-full bg-gray-200 transition-colors duration-300" aria-label="Slide 2" data-index="1"></button>
+          <button class="w-3 h-3 rounded-full bg-blue-500 transition-colors duration-300 active" aria-label="Slide 3" data-index="2"></button>
           <button class="w-3 h-3 rounded-full bg-gray-200 transition-colors duration-300" aria-label="Slide 4" data-index="3"></button>
-          <button class="w-3 h-3 rounded-full bg-gray-200 transition-colors duration-300" aria-label="Slide 5" data-index="4"></button>
         </div>
       </div>
     </div>
@@ -121,11 +100,12 @@
 </style>
 
 <script>
-  // Cliente-side JavaScript para interactividad
   document.addEventListener('DOMContentLoaded', () => {
     const galleryImages = document.querySelectorAll('.gallery-image');
-    const paginationDots = document.querySelectorAll('#pagination button');
-    
+    const paginationDots = document.querySelectorAll('#pagination button')
+    /**
+     * @param {number} index - The index of the active gallery image.
+     */
     function setActive(index: number) {
       // Quitar clase active de todas las imágenes
       galleryImages.forEach(img => {

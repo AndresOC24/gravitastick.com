@@ -3,95 +3,47 @@
   - Aumentado el padding vertical para hacer la sección más grande
   - Agregado max-w-7xl para controlar el ancho máximo y evitar que esté apegado a los costados 
   - Mejorado el espaciado entre elementos
-  - Optimizado el tamaño del video y la experiencia de interacción
+  - Reemplazado el video por una imagen
 -->
 <section id="about" class="bg-secondary-blue-dark text-white py-16 md:py-24 px-4 md:px-8">
-    <div class="container mx-auto max-w-7xl flex flex-col md:flex-row items-center md:gap-4 lg:gap-8">
+  <div class="container mx-auto max-w-7xl flex flex-col md:flex-row items-center md:gap-4 lg:gap-8">
+    
+    <!-- Texto a la izquierda: aumentado tamaño y mejorado espaciado -->
+    <div class="md:w-3/5 text-center md:text-left mb-8 md:mb-0">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+        DOMINA TU MOVILIDAD<br>
+        ELEVA TU ENTRENAMIENTO
+      </h2>
+      <p class="text-gray-300 text-base md:text-xl mb-8 max-w-xl">
+        Las barras <span class="text-primary-yellow font-bold">Gravita Stick</span> están diseñadas para potenciar tu control, fuerza y flexibilidad.
+        Desde estiramientos hasta ejercicios de estabilidad y fortalecimiento, esta herramienta te ayuda a mejorar tu postura, liberar tensiones y optimizar cada movimiento.
+      </p>
+      <p class="text-gray-300 text-base md:text-xl mb-8 max-w-xl">
+        Ligero, versátil y para todos. Ya seas atleta, principiante o estés en rehabilitación, <span class="text-primary-yellow font-bold">Gravita Stick</span> se adapta a tu ritmo y necesidades.
+      </p>
       
-      <!-- Texto a la izquierda: aumentado tamaño y mejorado espaciado -->
-      <div class="md:w-3/5 text-center md:text-left mb-8 md:mb-0">
-        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-          DOMINA TU MOVILIDAD<br>
-          ELEVA TU ENTRENAMIENTO
-        </h2>
-        <p class="text-gray-300 text-base md:text-xl mb-8 max-w-xl">
-          Las barras <span class="text-primary-yellow font-bold">Gravita Stick</span> están diseñadas para potenciar tu control, fuerza y flexibilidad.
-          Desde estiramientos hasta ejercicios de estabilidad y fortalecimiento, esta herramienta te ayuda a mejorar tu postura, liberar tensiones y optimizar cada movimiento.
-        </p>
-        <p class="text-gray-300 text-base md:text-xl mb-8 max-w-xl">
-          Ligero, versátil y para todos. Ya seas atleta, principiante o estés en rehabilitación, <span class="text-primary-yellow font-bold">Gravita Stick</span> se adapta a tu ritmo y necesidades.
-        </p>
-        
-        <!-- Botón mejorado -->
-        <a href="#" class="inline-block bg-blue-800 text-gray-300 font-semibold px-8 py-3 rounded-lg border border-black shadow-md hover:bg-gray-500 transition-all duration-300 transform hover:scale-105">
-          Más información
-        </a>
-      </div>
-  
-      <!-- Video a la derecha: aumentado tamaño y añadido interactividad -->
-      <div class="md:w-2/5 flex justify-center">
-        <!-- 
-          - Aumentado el ancho para hacer el video más grande
-          - Añadido cursor-pointer para indicar que es clickeable
-          - Añadida transición suave al hacer hover
-          - Añadido ID para manipular con JavaScript
-        -->
-        <div id="videoContainer" class="w-72 sm:w-80 md:w-80 lg:w-96 h-auto aspect-[9/16] border-0 border-gray-300 rounded-xl overflow-hidden relative cursor-pointer transform transition-transform duration-300 hover:scale-102 shadow-lg">
-          <!-- Overlay con ícono de play para indicar que es clickeable -->
-          <div id="playOverlay" class="absolute inset-0 bg-opacity-40 flex items-center justify-center z-10">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-gray-300 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-          </div>
-          
-          <!-- Video con controles ocultos por defecto -->
-          <video id="productVideo" muted playsinline poster="/videos/posterVideo.png" class="w-full h-full object-cover">
-            <source src="/videos/videoReferencia2.mp4" type="video/mp4" />
-            Tu navegador no soporta videos en HTML5.
-          </video>
-        </div>
-      </div>
-  
+      <!-- Botón mejorado -->
+      <a href="#" class="inline-block bg-blue-800 text-gray-300 font-semibold px-8 py-3 rounded-lg border border-black shadow-md hover:bg-gray-500 transition-all duration-300 transform hover:scale-105">
+        Más información
+      </a>
     </div>
-  </section>
-  
-  <!-- Script para manejar la reproducción del video -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const videoContainer = document.getElementById('videoContainer');
-      const playOverlay = document.getElementById('playOverlay');
-      const video = document.getElementById('productVideo') as HTMLVideoElement;
-            
-      // Función para alternar reproducción al hacer clic
-      if (videoContainer) {
-        videoContainer.addEventListener('click', function() {
-        if (video && (video as HTMLVideoElement).paused) {
-          // Si está pausado, reproducir con sonido
-          video.muted = false;
-          video.play();
-          if (playOverlay) {
-            playOverlay.style.display = 'none';
-          }
-        } else {
-          // Si está reproduciendo, pausar
-          video.pause();
-          if (playOverlay) {
-            playOverlay.style.display = 'flex';
-          }
-        }
-      });
-    }
-    });
 
-    // Cuando el video termina, mostrar el overlay nuevamente
-    const video = document.getElementById('productVideo') as HTMLVideoElement;
-    video.addEventListener('ended', function() {
-      const playOverlay = document.getElementById('playOverlay');
-      if (playOverlay) {
-        playOverlay.style.display = 'flex';
-      }
-      video.muted = true; // Volver a silenciar para próxima reproducción automática
-      video.currentTime = 0; // Reiniciar el video
-    });
-  </script>
+    <!-- Imagen a la derecha: manteniendo el mismo estilo y dimensiones del video -->
+    <div class="md:w-2/5 flex justify-center">
+      <!-- 
+        - Mantenido el mismo ancho que tenía el video
+        - Mantenido el mismo estilo visual con bordes redondeados y sombra
+        - Añadida transición suave al hacer hover igual que en el video
+      -->
+      <div class="w-72 sm:w-80 md:w-80 lg:w-96 h-auto aspect-[9/16] border-0 border-gray-300 rounded-xl overflow-hidden relative transform transition-transform duration-300 hover:scale-102 shadow-lg">
+        <!-- Imagen principal -->
+        <img 
+          src="images/imageAboutUs.webp" 
+          alt="Gravita Stick en uso" 
+          class="w-full h-full object-cover"
+          onerror="this.src='/images/placeholder-product.jpg'; this.onerror=null;"
+        />
+      </div>
+    </div>
+  </div>
+</section>

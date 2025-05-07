@@ -9,67 +9,86 @@ function toggleMenu() {
   }
 }
 ---
-    <!-- Colocamos el script al final del body para asegurarnos que el DOM esté cargado -->
-    <script>
-        // Hacemos que toggleMenu sea accesible globalmente
-        (window as any).toggleMenu = function() {
-          const menu = document.querySelector("#mobile-menu");
-          if (menu) {
-            menu.classList.toggle("hidden");
-          }
-        };
-  
-        // Ejemplo del script para el navbar (mantenerlo o ajustarlo según necesites)
-        document.addEventListener("DOMContentLoaded", function () {
-          const navbar = document.querySelector("#navbar");
-  
-          if (navbar) {
-            window.addEventListener("scroll", function () {
-              if (window.scrollY > 50) {
-                navbar.setAttribute("style", "background-color: var(--color-secondary-blue-dark) !important");
-                navbar.classList.add("shadow-lg");
-              } else {
-                navbar.setAttribute("style", "background-color: transparent !important");
-                navbar.classList.remove("shadow-lg");
-              }
-            });
-          }
-        });
-      </script>
+<!-- Colocamos el script al final del body para asegurarnos que el DOM esté cargado -->
+<script>
+  // Extendemos la interfaz Window para incluir toggleMenu
+  declare global {
+    interface Window {
+      toggleMenu: () => void;
+    }
+  }
 
+  // Hacemos que toggleMenu sea accesible globalmente
+  window.toggleMenu = function() {
+    const menu = document.querySelector("#mobile-menu");
+    if (menu) {
+      menu.classList.toggle("hidden");
+    }
+  };
+
+  // Script para el navbar con funcionamiento mejorado
+  document.addEventListener("DOMContentLoaded", function () {
+    const navbar = document.querySelector("#navbar") as HTMLElement;
+
+    if (navbar) {
+      // Función para manejar el cambio de color del navbar al hacer scroll
+      function handleScroll() {
+        if (window.scrollY > 50) {
+          if (navbar) {
+            (navbar as HTMLElement).style.backgroundColor = "var(--color-secondary-blue-dark)";
+            navbar.classList.add("shadow-lg");
+          }
+        } else {
+          navbar.style.backgroundColor = "transparent";
+          navbar.classList.remove("shadow-lg");
+        }
+      }
+
+      // Aplicar inicialmente
+      handleScroll();
+      
+      // Añadir listener para el scroll
+      window.addEventListener("scroll", handleScroll);
+    }
+  });
+</script>
 
 <nav id="navbar" class="fixed w-full top-0 left-0 z-50 transition-all duration-300 bg-transparent">
-    <div class="container mx-auto flex justify-between items-center py-6 px-8">
-      <!-- Logo -->
-      <a href="/" class="flex items-center">
-        <img src="/images/LogoOficialSinFondo.webp" alt="Logo GravitaStick" class="h-10 w-auto" />
-      </a>
+  <div class="container mx-auto flex justify-between items-center py-4 px-4 md:px-6 lg:px-8">
+    <!-- Logo - Ajustado para mantener proporciones en todos los dispositivos -->
+    <a href="/" class="flex items-center">
+      <div class="w-24 md:w-28 lg:w-32 h-auto flex items-center">
+        <img 
+          src="/images/LogoOficialSinFondo.webp" 
+          alt="Logo GravitaStick" 
+          class="w-full object-contain"
+        />
+      </div>
+    </a>
 
-      <!-- Menú Desktop -->
-      <ul class="hidden md:flex space-x-12 text-white font-medium text-lg">
-        <li><a href="#features" class="hover:text-yellow-400 transition-colors duration-300">Ofrecemos</a></li>
-        <li><a href="#about" class="hover:text-yellow-400 transition-colors duration-300">Quienes somos</a></li>
-        <li><a href="#applications" class="hover:text-yellow-400 transition-colors duration-300">Aplicaciones</a></li>
-        <li><a href="#products" class="hover:text-yellow-400 transition-colors duration-300">Productos</a></li>
-        <li><a href="https://wa.me/59178415415?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20las%20barras%20de%20GravitaStick" target="_blank" class="hover:text-yellow-400 transition-colors duration-300">Contáctanos</a></li>
-      </ul>
+    <!-- Menú Desktop - Con responsive mejorado -->
+    <ul class="hidden md:flex space-x-6 lg:space-x-12 text-white font-medium text-base lg:text-lg">
+      <li><a href="#features" class="hover:text-yellow-400 transition-colors duration-300">Ofrecemos</a></li>
+      <li><a href="#about" class="hover:text-yellow-400 transition-colors duration-300">Quienes somos</a></li>
+      <li><a href="#applications" class="hover:text-yellow-400 transition-colors duration-300">Aplicaciones</a></li>
+      <li><a href="#products" class="hover:text-yellow-400 transition-colors duration-300">Productos</a></li>
+      <li><a href="https://wa.me/59178415415?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20las%20barras%20de%20GravitaStick" target="_blank" class="hover:text-yellow-400 transition-colors duration-300">Contáctanos</a></li>
+    </ul>
 
-      <!-- Botón menú hamburguesa en móvil -->
-      <button class="md:hidden focus:outline-none" onclick="toggleMenu()">
-        <img src="icons/iconMenu.svg" alt="Menú" class="h-8 w-8 text-white" />
-      </button>
-    </div>
+    <!-- Botón menú hamburguesa en móvil -->
+    <button class="md:hidden focus:outline-none" onclick="toggleMenu()">
+      <img src="icons/iconMenu.svg" alt="Menú" class="h-8 w-8 text-white" />
+    </button>
+  </div>
 
-    <!-- Menú desplegable en móvil -->
-    <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full text-white text-center py-4">
-      <ul class="space-y-4">
-        <li><a href="#features" class="block hover:text-yellow-400 transition-colors duration-300">Ofrecemos</a></li>
-        <li><a href="#about" class="hover:text-yellow-400 transition-colors duration-300">Quienes somos</a></li>
-        <li><a href="#applications" class="hover:text-yellow-400 transition-colors duration-300">Aplicaciones</a></li>
-        <li><a href="#products" class="block hover:text-yellow-400 transition-colors duration-300">Productos</a></li>
-        <li><a href="https://wa.me/59178415415?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20las%20barras%20de%20GravitaStick" class="hover:text-yellow-400 transition-colors duration-300">Contáctanos</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  
+  <!-- Menú desplegable en móvil - Con fondo y estilo mejorado -->
+  <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full text-white text-center py-4 bg-gray-900 bg-opacity-90 backdrop-blur-sm">
+    <ul class="space-y-4 py-2">
+      <li><a href="#features" class="block py-2 hover:text-yellow-400 transition-colors duration-300">Ofrecemos</a></li>
+      <li><a href="#about" class="block py-2 hover:text-yellow-400 transition-colors duration-300">Quienes somos</a></li>
+      <li><a href="#applications" class="block py-2 hover:text-yellow-400 transition-colors duration-300">Aplicaciones</a></li>
+      <li><a href="#products" class="block py-2 hover:text-yellow-400 transition-colors duration-300">Productos</a></li>
+      <li><a href="https://wa.me/59178415415?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20las%20barras%20de%20GravitaStick" class="block py-2 hover:text-yellow-400 transition-colors duration-300">Contáctanos</a></li>
+    </ul>
+  </div>
+</nav>

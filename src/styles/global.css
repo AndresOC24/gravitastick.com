@@ -1,5 +1,16 @@
 @import "tailwindcss";
 
+@plugin "flyonui"{
+   themes: light --default;
+}
+@import "flyonui/variants.css";
+
+/* 1. Activa los iconos de Flyouni */
+@plugin "@iconify/tailwind4";
+
+
+
+
 @theme{
     --color-primary-yellow: #f2d608;
     --color-secondary-blue-dark: #07131F;
